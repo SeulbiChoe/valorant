@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #000;
-    padding: 0 18px;
+    padding: 0 21px;
 }
 .mo_gnb .open {
     width: 25px;
@@ -40,14 +40,14 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-right: 18px;
+    padding-right: 21px;
 }
 .mo_gnb .mo_list .close {
     width: 26px;
     height: 26px;
 }
 .mo_gnb .mo_list ul {
-    padding: 15px;
+    padding: 21px;
 }
 .contents > section {
     width: 100%;
@@ -69,13 +69,16 @@
 .contents .intro .txt {
     width: 100%;
     position: absolute;
-    top: 30vh;
+    top: 25vh;
 }
 .contents .intro .go_link {
     position: absolute;
-    bottom: 60px;
+    bottom: -100%;
     right: 27px;
-    background-color: tomato;
+    transition: bottom .7s;
+}
+.contents .intro .go_link.active {
+    bottom: 33px;
 }
 .contents .introduction {
     background-color: aquamarine;
@@ -86,20 +89,11 @@
     .contents .intro .video .wrapper {
         width: 50%;
     }
-    .contents .intro .go_link {
-        right: 60px;
-        bottom: 90px;
-    }
 }
 @media (min-width: 1024px) {
     .contents .intro .video .wrapper {
         width: 45%;
         top: 65vh;
     }
-    .contents .intro .txt {
-        top: 35vh;
-    }
-    .contents .intro .go_link {
-        bottom: 36px;
-    }
+
 }
