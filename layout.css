@@ -1,1 +1,93 @@
 @charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mo_gnb {
+    width: 100%;
+    height: 52px;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+}
+.mo_gnb .logo {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gold;
+    padding: 0 9px 0 9px;
+}
+.mo_gnb .open {
+    width: 42px;
+    height: 42px;
+    background-color: rebeccapurple;
+}
+.mo_gnb .mo_list {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.contents > section {
+    width: 100%;
+    height: 100vh;
+}
+.contents .intro {
+    background-color: blue;
+}
+.contents .intro .video {
+    width: 80%;
+    height: 65vh;
+    background-color: yellowgreen;
+    margin: 0 auto;
+    position: relative;
+    top: 30vh;
+}
+.contents .intro .txt {
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    position: absolute;
+    top: 30vh;
+}
+.contents .intro .go_link {
+    position: absolute;
+    bottom: 60px;
+    right: 27px;
+    background-color: tomato;
+}
+.contents .introduction {
+    background-color: aquamarine;
+}
+
+
+@media (min-width: 768px) {
+    .contents .intro .video {
+        width: 65%;
+    }
+    .contents .intro .go_link {
+        right: 60px;
+        bottom: 90px;
+    }
+}
+@media (min-width: 1024px) {
+    .contents .intro .video {
+        width: 50%;
+        max-width: 800px;
+        top: 65vh;
+    }
+    .contents .intro .txt {
+        top: 40vh;
+    }
+    .contents .intro .go_link {
+        bottom: 36px;
+    }
+}
