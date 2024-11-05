@@ -1,0 +1,51 @@
+@charset "utf-8";
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.mo_gnb .logo h1 {
+    height: 30px;
+}
+.mo_gnb .open {
+    position: relative;
+}
+.mo_gnb .open span {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+}
+.mo_gnb .open span:nth-child(2) {
+    top: 9px;
+}
+.mo_gnb .open span:last-child {
+    top: 18px;
+}
+.mo_gnb .mo_list .close {
+    position: relative;
+}
+.mo_gnb .mo_list .close span {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+}
+.mo_gnb .mo_list .close span:first-child {
+    transform: rotate(45deg);
+}
+.mo_gnb .mo_list .close span:last-child {
+    transform: rotate(-45deg);
+}
+.mo_gnb .mo_list ul li {
+    padding: 12px 6px;
+}
+.mo_gnb .mo_list ul li a {
+    color: #fff;
+    font-size: 2em;
+}
