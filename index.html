@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="fixed">
     <!-- 전체 레이아웃 시작 -->
     <div id="wrap">
         
@@ -37,8 +37,8 @@
                         </div>
                     </div>
                     <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">INTRODUCTION</a></li>
+                        <li><a href="#intro">HOME</a></li>
+                        <li><a href="#introduction">INTRODUCTION</a></li>
                         <li><a href="#">ROLE</a></li>
                         <li><a href="#">MAP</a></li>
                     </ul>
@@ -55,10 +55,10 @@
         <!-- 본문 시작 -->
         <div class="contents">
             <!-- 인트로 -->
-            <section class="intro">
+            <section class="intro" id="intro">
                 <div class="video">
                     <div class="wrapper">
-                        <video src="valorant.mp4" autoplay muted></video>
+                        <!-- <video src="valorant.mp4" autoplay muted loop></video> -->
                     </div>
                 </div>
                 <div class="txt">
@@ -71,8 +71,23 @@
             </section>
             
             <!-- 소개 -->
-            <section class="introduction">
+            <section class="introduction" id="introduction">
                 <!-- 글자로 설명 먼저 애니메이션으로 올라온 다음에 영상 링크 같이 올라옴 -->
+                 <div class="txt1">
+                    <p>우리는 발로란트다</p>
+                 </div>
+                 <div class="txt2">
+                    <p>한계를 돌파하라</p>
+                 </div>
+                 <div class="vdo">
+                    <video autoplay loop playsline>
+                        <source data-testid="source-video/mp4" src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/f6ccf20dfe3f6a24ea9216bb8afaaa66740c715d.mp4" type="video/mp4">
+                    </video>
+                 </div>
+                 <div class="txt3">
+                    <p>전 세계의 경쟁 무대에서 여러분의 스타일과 실력을 보여 주세요. 정밀한 사격과 전략 스킬을 사용해 13라운드 동안 공격과 방어를 번갈아 진행하게 됩니다. 라운드당 목숨은 하나이며, 생존하려면 상대보다 더 빠르게 판단해야 합니다. 데스매치와 스파이크 돌격, 경쟁전과 일반전에서 적과 싸워 이기세요.</p>
+                 </div>
+                 <!-- <div class="txt4"></div> -->
             </section>
 
             <!-- 요원 -->

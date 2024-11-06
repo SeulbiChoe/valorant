@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-size: 15px;
 }
+body.fixed {
+    overflow: hidden
+}
 .mo_gnb {
     width: 100%;
     height: 52px;
@@ -51,16 +54,15 @@
 }
 .contents > section {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .contents .intro {
     background-color: #000;
-    /* background-color: #eb4b4b; */
 }
 .contents .intro .video .wrapper {
     width: 75%;
     height: 60vh;
-    background-color: yellowgreen;
+    background-color: darkcyan;
     margin: 0 auto;
     position: relative;
     top: 35vh;
@@ -80,11 +82,34 @@
 .contents .intro .go_link.active {
     bottom: 33px;
 }
-.contents .introduction {
-    background-color: aquamarine;
+.contents > section:not(:first-child) {
+    padding: 21px;
 }
-
-
+/* section introduction */
+.contents .introduction {
+    background-color: #eb4b4b;
+    padding-bottom: 120px !important;
+}
+.introduction .txt1 {
+    width: 100%;
+}
+.introduction .txt2 {
+    width: 100%;
+    margin-top: 150px;
+}
+.introduction .txt3 {
+    width: 100%;
+    margin-top: 21px;
+}
+.contents .introduction .vdo {
+    width: 100%;
+    overflow: hidden;
+}
+.contents .introduction .vdo video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 @media (min-width: 768px) {
     .contents .intro .video .wrapper {
         width: 50%;
@@ -95,5 +120,6 @@
         width: 45%;
         top: 65vh;
     }
-
 }
+
+

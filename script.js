@@ -28,3 +28,9 @@ let goLink = document.querySelector(".intro .go_link");
 setTimeout(()=>{
     goLink.classList.add("active");
 }, 3000)
+
+//인트로 영상 3.5초 뒤 overflow remove
+let bodyFixed = document.querySelector("body.fixed");
+setTimeout(()=>{
+    bodyFixed.classList.remove("fixed");
+}, 3500);
