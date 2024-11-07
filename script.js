@@ -12,9 +12,11 @@ let menuClose = document.querySelector(".mo_list .close");
 
 menuOpen.addEventListener("click", function(){
     mobileMenu.classList.add("active");
+    bodyFixed.classList.add("fixed");
 });
 menuClose.addEventListener("click", function(){
     mobileMenu.classList.remove("active");
+    bodyFixed.classList.remove("fixed");
 });
 
 // 인트로 영상

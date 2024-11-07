@@ -1,12 +1,13 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap');
 a {
     text-decoration: none;
 }
 li {
     list-style: none;
 }
-.mo_gnb .logo h1 {
+.mo_gnb .logo h1, .dt_gnb h1 {
     height: 30px;
 }
 .mo_gnb .open {
@@ -32,7 +33,7 @@ li {
     opacity: 0;
     transition: all .5s;
 }
-.mo_gnb .mo_list li a {
+.mo_gnb .mo_list li a, .dt_gnb nav ul li a {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -136,7 +137,6 @@ li {
     padding: 6px 15px 9px 15px;
     border-radius: 21px;
     border: 1px solid #fff;
-    /* background-color: #eb4b4b; */
     transition: .7s ease-in-out;
     background: -webkit-linear-gradient(0deg, #eb4b4b 50%, #fff 50%);
     background-size: 400px 80px;
@@ -155,6 +155,14 @@ li {
 .contents .intro .go_link:hover a {
     color: #000;
 }
+.contents section:not(:first-child) p {
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.introduction {
+    position: relative;
+}
 .introduction > div > p {
     color: #fff;
 }
@@ -165,6 +173,64 @@ li {
 .introduction .txt3 {
     line-height: 21px;
 }
+/* 백그라운드 움직이는 배경 */
+.bg_animation {
+    width: 100%;
+    height: 900px;
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    opacity: .5;
+    z-index: 1;
+}
+.bg_animation span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    transform: translateX(0);
+    position: absolute;
+}
+.bg_animation span:nth-child(1) {
+    top: 30px;
+    left: 21px;
+    animation: sizeUp 1.5s cubic-bezier(0.7, 0, 0.15, 1) infinite alternate-reverse;
+}
+.bg_animation span:nth-child(2) {
+    top: 90px;
+    left: 110px;
+}
+.bg_animation span:nth-child(3) {
+    top: 120px;
+    left: 21px;
+}
+.bg_animation span:nth-child(4) {
+    right: 21px;
+    bottom: 0;
+}.bg_animation span:nth-child(5) {
+    right: 21px;
+    bottom: 40px;
+}
+@keyframes sizeUp {
+    0% {
+        width: 10px;
+        transform: translateX(0);
+    }
+    50% {
+        width: 60px;
+        transform: translateX(20px);
+    }
+    100% {
+        width: 10px;
+        transform: translateX(80px);
+    }
+}
+.introduction .txt {
+    position: relative;
+    z-index: 2;
+}
 @media (min-width: 768px) {
     .contents .intro .txt p {
         font-size: 3.2em;
@@ -174,6 +240,9 @@ li {
     }
 }
 @media (min-width: 1024px) {
+    .dt_gnb nav ul li a {
+        color: #fff;
+    }
     .contents .intro .txt p {
         font-size: 5em;
     }
