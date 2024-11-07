@@ -7,6 +7,9 @@ a {
 li {
     list-style: none;
 }
+body {
+    background-color: #eb4b4b;
+}
 .mo_gnb .logo h1, .dt_gnb h1 {
     height: 30px;
 }
@@ -176,11 +179,10 @@ li {
 /* 백그라운드 움직이는 배경 */
 .bg_animation {
     width: 100%;
-    height: 900px;
-    background-color: aqua;
+    height: 100%;
+    /* background-color: aqua; */
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
     left: 0;
     opacity: .5;
     z-index: 1;
@@ -194,24 +196,24 @@ li {
     position: absolute;
 }
 .bg_animation span:nth-child(1) {
-    top: 30px;
+    top: 90px;
     left: 21px;
     animation: sizeUp 1.5s cubic-bezier(0.7, 0, 0.15, 1) infinite alternate-reverse;
 }
 .bg_animation span:nth-child(2) {
-    top: 90px;
+    top: 150px;
     left: 110px;
 }
 .bg_animation span:nth-child(3) {
-    top: 120px;
+    top: 180px;
     left: 21px;
 }
 .bg_animation span:nth-child(4) {
     right: 21px;
-    bottom: 0;
+    bottom: 52px;
 }.bg_animation span:nth-child(5) {
     right: 21px;
-    bottom: 40px;
+    bottom: 70px;
 }
 @keyframes sizeUp {
     0% {
@@ -264,4 +266,21 @@ li {
             top: -200px;
         }
     }
+    .contents .introduction .txt2 > p:first-child {
+        display: none;
+    }
+    .contents .introduction .txt2 > p.dt_txt {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: end;
+    }
+    .contents .introduction .txt2 > p.dt_txt span:first-child {
+        font-size: 7em;
+    }
+    .contents .introduction .txt2 > p.dt_txt span:last-child {
+        font-size: 5em;
+        margin-top: 33px;
+    }
+
 }
