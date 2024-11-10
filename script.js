@@ -36,3 +36,26 @@ let bodyFixed = document.querySelector("body.fixed");
 setTimeout(()=>{
     bodyFixed.classList.remove("fixed");
 }, 3500);
+
+// 스크롤 하면 애니메이션 시작
+let windowHeight = window.innerHeight;
+let introTxt2Div = document.querySelector(".contents .introduction .txt2");
+let introTxt2 = document.querySelector(".contents .introduction .txt .mo_txt");
+let introTxt2Height = introTxt2Div.offsetHeight;
+// offsetHeight 에 자꾸 ()이거 함수 넣어서 오류 나왔음 ㅋㅋ...
+
+window.addEventListener("scroll", function(){
+    let scrollTop = window.scrollY;
+    //맨 위부터 텍스트2 까지의 와이축 거리임 스크롤탑으로 찍어보면 알 수 있다.
+    let distanceFromHtml = introTxt2Div.getBoundingClientRect().top + this.window.scrollY;
+    console.log(scrollTop);
+    console.log(distanceFromHtml);
+    console.log(windowHeight);
+
+    if (distanceFromHtml + introTxt2Height < scrollTop + windowHeight) {
+        introTxt2.classList.add("active");
+    }
+    else if (distanceFromHtml + introTxt2Height > scrollTop + windowHeight) {
+        introTxt2.classList.remove("active");
+    }
+})

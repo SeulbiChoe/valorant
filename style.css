@@ -8,7 +8,7 @@ li {
     list-style: none;
 }
 body {
-    background-color: #eb4b4b;
+    /* background-color: #eb4b4b; */
 }
 .mo_gnb .logo h1, .dt_gnb h1 {
     height: 30px;
@@ -116,7 +116,7 @@ body {
         top: 25vh;
     }
     100% {
-        top: -15%;
+        top: -25%;
     }
 }
 .contents .intro .video video {
@@ -158,19 +158,20 @@ body {
 .contents .intro .go_link:hover a {
     color: #000;
 }
+/* contents 내 첫번째 섹션 제외한 나머지 섹션 스타일 */
 .contents section:not(:first-child) p {
     font-family: "Noto Sans KR", serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
-.introduction {
-    position: relative;
-}
-.introduction > div > p {
+.contents .introduction .txt {
     color: #fff;
 }
+.contents .introduction .txt .mo_txt {
+    text-align: center;
+}
 .introduction .txt1, .introduction .txt2 {
-    line-height: 52px;
+    /* line-height: 52px; */
     text-align: center;
 }
 .introduction .txt3 {
@@ -229,10 +230,6 @@ body {
         transform: translateX(80px);
     }
 }
-.introduction .txt {
-    position: relative;
-    z-index: 2;
-}
 @media (min-width: 768px) {
     .contents .intro .txt p {
         font-size: 3.2em;
@@ -266,21 +263,12 @@ body {
             top: -200px;
         }
     }
-    .contents .introduction .txt2 > p:first-child {
-        display: none;
+    .contents .introduction .txt2 p.dt_txt span:first-child {
+        /* font-size: 100px; */
     }
-    .contents .introduction .txt2 > p.dt_txt {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: end;
-    }
-    .contents .introduction .txt2 > p.dt_txt span:first-child {
-        font-size: 7em;
-    }
-    .contents .introduction .txt2 > p.dt_txt span:last-child {
-        font-size: 5em;
-        margin-top: 33px;
+    .contents .introduction .txt2 p.dt_txt span:last-child {
+        font-size: 80px;
+        /* margin-top: 33px; */
     }
 
 }
