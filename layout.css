@@ -104,39 +104,94 @@ body.fixed {
 }
 .contents .introduction .txt {
     grid-column: span 12;
+    background-color: gold;
+    height: 42px;
+}
+.contents .introduction .wrap {
+    grid-column: span 12;
+    background-color: goldenrod;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.contents .introduction .item {
+    grid-column: span 12;
     position: relative;
     /* overflow: hidden; */
 }
-.contents .introduction .txt2 {
-    height: 52px;
+.contents .introduction .txt1 {
+    height: 42px;
     margin-top: 150px;
+    background-color: pink;
 }
-.contents .introduction .txt .mo_txt {
+.contents .introduction .txt1 .mo_txt {
     width: 100%;
     position: absolute;
-    /* background-color: turquoise; */
+    background-color: turquoise;
     top: 120%;
     opacity: 0;
     transform: translateY(-50%);
     transition: all cubic-bezier(0.7, 0, 0.15, 1) 1s;
 }
-.contents .introduction .txt .mo_txt.active {
+.contents .introduction .txt1 .mo_txt.active {
     top: 50%;
     opacity: 1;
 }
 .contents .introduction .vdo {
-    grid-column: span 12;
     overflow: hidden;
+    background-color: palegoldenrod;
 }
 .contents .introduction .vdo video {
     width: 100%;
     object-fit: contain;
 }
-.contents .introduction .txt2 .dt_txt {
+.contents .introduction .txt1 .dt_txt {
     display: none;
 }
-.contents .introduction .dt_txt {
-    display: none;
+/* 뉴스부분 */
+.contents .introduction .news {
+    width: 100%;
+    background-color: blue;
+    height: 100%;
+}
+.contents .introduction .news .title {
+    grid-column: span 12;
+    height: 70px;
+    background-color: yellowgreen;
+}
+.contents .introduction .news .news_contents {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.contents .introduction .news .news_img {
+    grid-column: span 12;
+    /* height: 250px; */
+    aspect-ratio: 16/9;
+    background-color: yellow;
+}
+.contents .introduction .news .news_date {
+    grid-column: span 12;
+    height: 60px;
+    background-color: darkcyan;
+}
+.contents .introduction .news .news_title {
+    grid-column: span 12;
+    height: 60px;
+    background-color: darkgoldenrod;
+}
+.contents .introduction .news .news_decs {
+    grid-column: span 12;
+    height: 100px;
+    background-color: saddlebrown;
+}
+.contents .introduction .news .pagenation {
+    grid-column: span 12;
+    background-color: thistle;
+    height: 40px;
 }
 @media (min-width: 768px) {
     .contents .intro .video .wrapper {
@@ -175,61 +230,65 @@ body.fixed {
         width: 45%;
         top: 65vh;
     }
-    .contents .introduction .txt3 {
-        order: 3;
-        grid-column: span 4;
-        grid-row: span 1;
-        /* background-color: violet; */
+    .contents .introduction .wrap {
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        margin-top: 150px;
     }
-    .contents .introduction .txt2 {
-        order: 4;
+    .contents .introduction .wrap:nth-child(2) {
+        margin-top: 150px;
+    }
+    .contents .introduction .txt1 {
+        order: 3;
         grid-column: span 4;
         margin: 0;
         height: 100%;
         grid-row: span 1;
-        /* background-color: aquamarine; */
+    }
+    .contents .introduction .txt2 {
+        order: 2;
+        grid-column: span 4;
+        grid-row: span 1;
     }
     .contents .introduction .vdo {
-        order: 2;
+        order: 1;
         grid-column: span 8;
         grid-row: span 2;
     }
-    .contents .introduction .txt2 .mo_txt {
+    .contents .introduction .txt1 .mo_txt {
         display: none;
     }
-    .contents .introduction .txt2 .dt_txt {
+    .contents .introduction .txt1 .dt_txt {
         display: block;
         position: relative;
         width: 100%;
         height: 100%;
     }
-    .contents .introduction .txt2 .dt_txt span {
+    .contents .introduction .txt1 .dt_txt span {
         position: absolute;
         width: 100%;
         display: inline-block;
         text-align: left;
         transition: bottom cubic-bezier(0.7, 0, 0.15, 1) 1s;
     }
-    .contents .introduction .txt2 .dt_txt span:first-child {
+    .contents .introduction .txt1 .dt_txt span:first-child {
+        height: 50%;
         left: 50%;
         transform: translateX(-50%);
         bottom: -100%;
+        background-color: aquamarine;
     }
-    .contents .introduction .txt2 .dt_txt span:last-child {
+    .contents .introduction .txt1 .dt_txt span:last-child {
+        height: 50%;
         left: 50%;
         transform: translateX(-50%);
         bottom: -100%;
+        background-color: thistle;
     }
-    .contents .introduction .txt2 .dt_txt.active span:first-child {
-        bottom: 75px;
+    .contents .introduction .txt1 .dt_txt.active span:first-child {
+        bottom: 50%;
     }
-    .contents .introduction .txt2 .dt_txt.active span:last-child {
+    .contents .introduction .txt1 .dt_txt.active span:last-child {
         bottom: 0;
         transition-delay: .3s;
     }
-    .contents .introduction .txt3 {
-        /* margin-top: 150px; */
-    }
 }
-
-

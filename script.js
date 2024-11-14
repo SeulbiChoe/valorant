@@ -47,12 +47,12 @@ setTimeout(()=>{
 window.addEventListener("scroll", function(){
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
-    let introTxt2Div = document.querySelector(".contents .introduction .txt2");
-    let introTxt2 = document.querySelector(".contents .introduction .txt .mo_txt");
-    let introTxt2Height = introTxt2Div.offsetHeight;
+    let introTxtDiv = document.querySelector(".contents .introduction .txt1");
+    let introTxt = document.querySelector(".contents .introduction .txt1 .mo_txt");
+    let introTxtHeight = introTxtDiv.offsetHeight;
     // offsetHeight 에 자꾸 ()이거 함수 넣어서 오류 나왔음 ㅋㅋ...
     //맨 위부터 텍스트2 까지의 와이축 거리임 스크롤탑으로 찍어보면 알 수 있다.
-    let distanceFromHtml = introTxt2Div.getBoundingClientRect().top + this.window.scrollY;
+    let distanceFromHtml = introTxtDiv.getBoundingClientRect().top + this.window.scrollY;
     // console.log(scrollTop);
     // console.log(distanceFromHtml);
     // console.log(windowHeight);
@@ -60,27 +60,35 @@ window.addEventListener("scroll", function(){
 
     //문제점: 반응형으로 크기를 늘리면 처음 헤이트를 가져와서 div가 바텀까지 나왔을 때 액티브가 안 되는 현상이 있음,
 
-    if (distanceFromHtml + introTxt2Height < scrollTop + windowHeight) {
-        introTxt2.classList.add("active");
+    if (distanceFromHtml + introTxtHeight < scrollTop + windowHeight) {
+        introTxt.classList.add("active");
     }
-    else if (distanceFromHtml + introTxt2Height > scrollTop + windowHeight) {
-        introTxt2.classList.remove("active");
+    else if (distanceFromHtml + introTxtHeight > scrollTop + windowHeight) {
+        introTxt.classList.remove("active");
     }
-})
+});
 
-//introduction txt2 desktop
+//introduction txt desktop
 window.addEventListener("scroll", function(){
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
-    let introTxt2Div = document.querySelector(".contents .introduction .txt2");
-    let introTxt2 = document.querySelector(".contents .introduction .txt .dt_txt");
-    let introTxt2Height = introTxt2Div.offsetHeight;
-    let distanceFromHtml = introTxt2Div.getBoundingClientRect().top + this.window.scrollY;
+    let introTxtDiv = document.querySelector(".contents .introduction .txt1");
+    let introTxt = document.querySelector(".contents .introduction .txt1 .dt_txt");
+    let introTxtHeight = introTxtDiv.offsetHeight;
+    let distanceFromHtml = introTxtDiv.getBoundingClientRect().top + this.window.scrollY;
 
-    if (distanceFromHtml + introTxt2Height < scrollTop + windowHeight) {
-        introTxt2.classList.add("active");
+    if (distanceFromHtml + introTxtHeight < scrollTop + windowHeight) {
+        introTxt.classList.add("active");
     }
-    else if (distanceFromHtml + introTxt2Height > scrollTop + windowHeight) {
-        introTxt2.classList.remove("active");
+    else if (distanceFromHtml + introTxtHeight > scrollTop + windowHeight) {
+        introTxt.classList.remove("active");
     }
+});
+
+
+//뉴스 부분 스크롤 애니메이션
+window.addEventListener("scroll", function(){
+    let scrollTop = window.scrollY;
+    let windowHeight = window.innerHeight;
+    
 })
