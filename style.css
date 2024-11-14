@@ -167,12 +167,12 @@ body {
 .contents .introduction .txt {
     color: #fff;
 }
-.contents .introduction .txt .mo_txt {
+.contents .introduction .txt .mo_txt,
+.contents .introduction .txt1 p {
     text-align: center;
 }
-.introduction .txt1, .introduction .txt2 {
-    /* line-height: 52px; */
-    text-align: center;
+.contents .introduction .txt1 p {
+    line-height: 52px;
 }
 .introduction .txt3 {
     line-height: 21px;
@@ -242,6 +242,9 @@ body {
     .dt_gnb nav ul li a {
         color: #fff;
     }
+    .dt_gnb nav ul li a:hover {
+        color: #eb4b4b;
+    }
     .contents .intro .txt p {
         font-size: 5em;
     }
@@ -264,11 +267,10 @@ body {
         }
     }
     .contents .introduction .txt2 p.dt_txt span:first-child {
-        /* font-size: 100px; */
+        font-size: 115px;
     }
     .contents .introduction .txt2 p.dt_txt span:last-child {
-        font-size: 80px;
-        /* margin-top: 33px; */
+        font-size: 85px;
     }
 
 }

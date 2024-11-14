@@ -96,19 +96,16 @@ body.fixed {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    background-color: red;
 }
 /* section introduction */
 .contents .introduction {
-    background-color: blueviolet;
-    /* height: 900px !important; */
+    background-color: #eb4b4b;
+    position: relative;
 }
 .contents .introduction .txt {
     grid-column: span 12;
-    background-color: #789978;
-    height: 52px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .contents .introduction .txt2 {
     height: 52px;
@@ -117,7 +114,7 @@ body.fixed {
 .contents .introduction .txt .mo_txt {
     width: 100%;
     position: absolute;
-    background-color: turquoise;
+    /* background-color: turquoise; */
     top: 120%;
     opacity: 0;
     transform: translateY(-50%);
@@ -129,7 +126,6 @@ body.fixed {
 }
 .contents .introduction .vdo {
     grid-column: span 12;
-    background-color: aqua;
     overflow: hidden;
 }
 .contents .introduction .vdo video {
@@ -139,50 +135,6 @@ body.fixed {
 .contents .introduction .txt2 .dt_txt {
     display: none;
 }
-/* .contents .introduction {
-    padding-bottom: 210px !important;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-}
-.introduction .txt {
-    position: relative;
-    z-index: 2;
-}
-.introduction .txt1 {
-    width: 100%;
-}
-.introduction .txt2 {
-    width: 100%;
-    margin: 150px 0 12px 0;
-    overflow: hidden;
-    background-color: blueviolet;
-}
-.introduction .txt2 > p:first-child {
-    position: absolute;
-    height: 52px;
-    width: 100%;
-    top: 52px;
-    transition: top .7s ease-in-out;
-    transition-delay: .5s;
-}
-.introduction .txt2 > p.active {
-    top: 0;
-}
-.introduction .txt3 {
-    width: 100%;
-    margin-top: 21px;
-    overflow: hidden;
-}
-.contents .introduction .vdo {
-    width: 100%;
-    overflow: hidden;
-}
-.contents .introduction .vdo video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-} */
 .contents .introduction .dt_txt {
     display: none;
 }
@@ -199,13 +151,18 @@ body.fixed {
         width: 100%;
         height: 52px;
         position: absolute;
-        top: 0;
+        top: -100%;
         z-index: 9;
         background-color: #000;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 21px;
+    }
+    .dt_gnb.active {
+        transition: all cubic-bezier(0.7, 0, 0.15, 1) .7s;
+        top: 0;
+        z-index: 9;
     }
     .dt_gnb nav ul {
         display: flex;
@@ -219,17 +176,23 @@ body.fixed {
         top: 65vh;
     }
     .contents .introduction .txt3 {
-        order: 2;
+        order: 3;
+        grid-column: span 4;
+        grid-row: span 1;
+        /* background-color: violet; */
     }
     .contents .introduction .txt2 {
         order: 4;
         grid-column: span 4;
         margin: 0;
         height: 100%;
+        grid-row: span 1;
+        /* background-color: aquamarine; */
     }
     .contents .introduction .vdo {
-        order: 3;
+        order: 2;
         grid-column: span 8;
+        grid-row: span 2;
     }
     .contents .introduction .txt2 .mo_txt {
         display: none;
@@ -237,30 +200,35 @@ body.fixed {
     .contents .introduction .txt2 .dt_txt {
         display: block;
         position: relative;
-        background-color: antiquewhite;
         width: 100%;
         height: 100%;
     }
     .contents .introduction .txt2 .dt_txt span {
         position: absolute;
-        background-color: rebeccapurple;
         width: 100%;
         display: inline-block;
         text-align: left;
-        /* height: 3em; */
+        transition: bottom cubic-bezier(0.7, 0, 0.15, 1) 1s;
     }
     .contents .introduction .txt2 .dt_txt span:first-child {
         left: 50%;
         transform: translateX(-50%);
-        /* height: 120px; */
-        bottom: 100px;
-        background-color: aquamarine !important;
+        bottom: -100%;
     }
     .contents .introduction .txt2 .dt_txt span:last-child {
-        height: 100px;
         left: 50%;
         transform: translateX(-50%);
+        bottom: -100%;
+    }
+    .contents .introduction .txt2 .dt_txt.active span:first-child {
+        bottom: 75px;
+    }
+    .contents .introduction .txt2 .dt_txt.active span:last-child {
         bottom: 0;
+        transition-delay: .3s;
+    }
+    .contents .introduction .txt3 {
+        /* margin-top: 150px; */
     }
 }
 
