@@ -91,4 +91,30 @@ window.addEventListener("scroll", function(){
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
     
+    let newsImg = document.querySelector(".contents .introduction .news .news_img");
+    let newImgHeight = newsImg.offsetHeight;
+    let imgFromHtml = newsImg.getBoundingClientRect().top + this.window.scrollY;
+    if (imgFromHtml + newImgHeight < scrollTop + windowHeight) {
+        newsImg.classList.add("active");
+    }
+    else if (imgFromHtml + newImgHeight > scrollTop + windowHeight) {
+        newsImg.classList.remove("active")
+    }
+
+    let newsDate = document.querySelector(".contents .introduction .news .news_date");
+    let newsDateHeight = newsDate.offsetHeight;
+    let dateFromHtml = newsDate.getBoundingClientRect().top + this.window.scrollY;
+
+    let newsTitle = document.querySelector(".contents .introduction .news .news_title");
+    let newsTitleHeight = newsTitle.offsetHeight;
+    let tileFromHtml = newsTitle.getBoundingClientRect().top + this.window.scrollY;
+
+    let newsDecs = document.querySelector(".contents .introduction .news .news_decs");
+    let newsDecsHeight = newsDecs.offsetHeight;
+    let decsFromHtml = newsDecs.getBoundingClientRect().top + this.window.scrollY;
+
+    let newsPagenation = document.querySelector(".contents .introduction .news .pagenation");
+    let newsPagenationHeight = newsPagenation.offsetHeight;
+    let pagenationFromHtml = newsPagenation.getBoundingClientRect().top + this.window.scrollY;
+
 })
