@@ -164,15 +164,36 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
 }
-.contents .introduction .txt p {
+.contents .valorant .txt p {
     color: #fff;
 }
-.contents .introduction .txt1 p {
+.contents .valorant .txt1 p {
     line-height: 42px;
 }
-.introduction .txt3 {
-    line-height: 21px;
+/************************ 뉴스부분 ***********************/
+.contents .valorant .news .pagenation .control .prev,
+.contents .valorant .news .pagenation .control .next {
+    position: relative;
+    cursor: pointer;
 }
+.contents .valorant .news .pagenation .control a {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+}
+.contents .valorant .news .pagenation .control .prev a {
+    transform: rotate(-45deg) translate(-50%, -50%);
+}
+.contents .valorant .news .pagenation .control .next a {
+    transform: rotate(135deg) translate(-50%, -50%);
+}
+
 /* 백그라운드 움직이는 배경 */
 .bg_animation {
     width: 100%;
