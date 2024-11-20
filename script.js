@@ -137,32 +137,32 @@ window.addEventListener("scroll", function(){
 
 
 //뉴스 슬라이드 캐러셀
-// let newsContents = document.querySelector(".contents .news .news_contents");
-// let news = document.querySelectorAll(".contents .news .news_contents .item");
-// let next = document.querySelector(".contents .news .pagenation .control .next");
-// let prev = document.querySelector(".contents .news .pagenation .control .prev");
-// let now = 0;
-// let last = news.length;
+let newsContents = document.querySelector(".contents .news .news_contents");
+let news = document.querySelectorAll(".contents .news .news_contents .item");
+let next = document.querySelector(".contents .news .pagenation .control .next");
+let prev = document.querySelector(".contents .news .pagenation .control .prev");
+let now = 0;
+let last = news.length;
 
-// next.addEventListener("click", function(){
-//     // for문 하면 안되고 이프문으로 하고 클릭하면 +1 하는 식으로 해야할 듯 함 어차피 통채로 움직이니까
+next.addEventListener("click", function(){
+    // for문 하면 안되고 이프문으로 하고 클릭하면 +1 하는 식으로 해야할 듯 함 어차피 통채로 움직이니까
 
-//     if (now == 0 || now < last - 1) {
-//         newsContents.style.transform = `translateX(-${now+1}00%)`;
-//         now += 1;
-//         console.log(now)
-//     }
-// });
+    if (now == 0 || now < last - 1) {
+        newsContents.style.transform = `translateX(-${now+1}00%)`;
+        now += 1;
+        console.log(now)
+    }
+});
 
-// prev.addEventListener("click", function(e){
+prev.addEventListener("click", function(e){
 
-//     if (now > 1) {
-//         newsContents.style.transform = `translateX(-${now-1}00%)`;
-//         console.log(now)
-//         now -= 1;
-//     } else if (now == 1) {
-//         newsContents.style.transform = `translateX(0%)`;
-//         e.preventDefault();
-//         now = 0;
-//     }
-// });
+    if (now > 1) {
+        newsContents.style.transform = `translateX(-${now-1}00%)`;
+        console.log(now)
+        now -= 1;
+    } else if (now == 1) {
+        newsContents.style.transform = `translateX(0%)`;
+        e.preventDefault();
+        now = 0;
+    }
+});

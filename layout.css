@@ -174,26 +174,30 @@ body.fixed {
 .contents .valorant .comment .txt2 {
     margin-bottom: 60px;
 }
-/************************ 뉴스부분 ***********************/
+/************************ 두번째 section - news ***********************/
 .contents .news {
     width: 100%;
-    background-color: rgb(236, 232, 225);
+    background: url("/bgImg_beige.png") no-repeat center;
+    background-size: cover;
 }
 .contents .news .wrap {
     width: 100%;
-    background-color: blue;
+    max-width: 1024px;
+    margin: 0 auto;
+    /* background-color: blue; */
     height: 100%;
     /* margin-top: 100px; */
     overflow: hidden;
+    padding: 20px 0;
 }
 .contents .news .wrap .title {
     width: 100%;
-    line-height: 70px;
-    /* background-color: yellowgreen; */
+    line-height: 42px;
+    margin-bottom: 20px;
 }
 .contents .news .wrap .news_contents {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 12px;
     display: flex;
     /* overflow: hidden; */
     /* transform: translateX(-200px); */
@@ -374,7 +378,9 @@ body.fixed {
     .contents .valorant .comment .txt2 {
         margin-bottom: 0;
     }
-
+    .contents .news .wrap {
+        padding: 60px 0;
+    }
     .contents .news .wrap .news_contents .item {
         flex: 0 0 calc(33% - 10px);
     }

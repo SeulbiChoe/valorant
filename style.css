@@ -189,20 +189,20 @@ body {
     text-align: center;
 } */
 /************************ 뉴스부분 ***********************/
-.contents .valorant .news .title h2 {
+.contents .news .title h2 {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 42px;
-    color: #fff;
+    /* color: #fff; */
 }
 
-.contents .valorant .news .pagenation .control .prev,
-.contents .valorant .news .pagenation .control .next {
+.contents .news .pagenation .control .prev,
+.contents .news .pagenation .control .next {
     position: relative;
     cursor: pointer;
 }
-.contents .valorant .news .pagenation .control a {
+.contents .news .pagenation .control a {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -213,51 +213,11 @@ body {
     left: 50%;
     transform-origin: 0% 0%;
 }
-.contents .valorant .news .pagenation .control .prev a {
+.contents .news .pagenation .control .prev a {
     transform: rotate(-45deg) translate(-50%, -50%);
 }
-.contents .valorant .news .pagenation .control .next a {
+.contents .news .pagenation .control .next a {
     transform: rotate(135deg) translate(-50%, -50%);
-}
-
-/* 백그라운드 움직이는 배경 */
-.bg_animation {
-    width: 100%;
-    height: 100%;
-    /* background-color: aqua; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .5;
-    z-index: 1;
-}
-.bg_animation span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #000;
-    transform: translateX(0);
-    position: absolute;
-}
-.bg_animation span:nth-child(1) {
-    top: 90px;
-    left: 21px;
-    animation: sizeUp 1.5s cubic-bezier(0.7, 0, 0.15, 1) infinite alternate-reverse;
-}
-.bg_animation span:nth-child(2) {
-    top: 150px;
-    left: 110px;
-}
-.bg_animation span:nth-child(3) {
-    top: 180px;
-    left: 21px;
-}
-.bg_animation span:nth-child(4) {
-    right: 21px;
-    bottom: 52px;
-}.bg_animation span:nth-child(5) {
-    right: 21px;
-    bottom: 70px;
 }
 @keyframes sizeUp {
     0% {
