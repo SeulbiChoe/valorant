@@ -98,7 +98,7 @@ body.fixed {
 /***************** 첫번째 section - valorant *****************/
 .contents .valorant {
     /* background-color: rgb(255, 70, 85); */
-    background: url("/bgImg_red.png") no-repeat center;
+    background: url("../bgImg_red.png") no-repeat center;
     background-size: cover;
     position: relative;
 }
@@ -177,7 +177,7 @@ body.fixed {
 /************************ 두번째 section - news ***********************/
 .contents .news {
     width: 100%;
-    background: url("/bgImg_beige.png") no-repeat center;
+    background: url("../bgImg_beige.png") no-repeat center;
     background-size: cover;
 }
 .contents .news .wrap {
