@@ -166,11 +166,26 @@ body {
 }
 .contents .valorant .txt p {
     color: #fff;
+    text-align: center
 }
-.contents .valorant .txt1 p {
+.contents .valorant .item p {
+    color: #fff;
+}
+.contents .valorant .txt  p {
     line-height: 42px;
 }
+.contents .valorant .txt1 .mo_txt {
+    text-align: center;
+}
 /************************ 뉴스부분 ***********************/
+.contents .valorant .news .title h2 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 42px;
+    color: #fff;
+}
+
 .contents .valorant .news .pagenation .control .prev,
 .contents .valorant .news .pagenation .control .next {
     position: relative;
@@ -283,11 +298,11 @@ body {
             top: -200px;
         }
     }
-    .contents .introduction .txt2 p.dt_txt span:first-child {
-        font-size: 115px;
+    .contents .valorant .comment .txt1 .dt_txt span:first-child {
+        font-size: 80px;
     }
-    .contents .introduction .txt2 p.dt_txt span:last-child {
-        font-size: 85px;
+    .contents .valorant .comment .txt1 .dt_txt span:last-child {
+        font-size: 80px;
     }
 
 }
