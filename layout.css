@@ -66,7 +66,6 @@ body.fixed {
     position: relative;
     top: 35vh;
     overflow: hidden;
-    /* background-color: yellowgreen; */
 }
 .contents .intro .txt {
     width: 100%;
@@ -96,31 +95,56 @@ body.fixed {
 .contents .wrap {
     width: 100%;
 }
-/* section valorant */
+/***************** 첫번째 section - valorant *****************/
 .contents .valorant {
-    background-color: #eb4b4b;
+    /* background-color: rgb(255, 70, 85); */
+    background: url("/bgImg_red.webp") no-repeat center;
+    background-size: cover;
     position: relative;
 }
 .contents .valorant .txt {
-    /* grid-column: span 12; */
     width: 100%;
     /* background-color: gold; */
-    height: 42px;
+    height: 100%;
+}
+.contents .valorant .txt p {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* background-color: wheat; */
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.contents .valorant .txt p span {
+    width: 100%;
+    position: absolute;
+    left: 110%;
+    transition: left cubic-bezier(0.7, 0, 0.15, 1) .8s;
+}
+.contents .valorant .txt p span:first-child {
+    bottom: 30%;
+}
+.contents .valorant .txt p span:last-child {
+    bottom: 0;
+    transition-delay: .2s;
+}
+.contents .valorant .txt p.active span {
+    left: 0;
 }
 .contents .valorant .comment {
     /* background-color: goldenrod; */
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    /* grid-row-gap: 20px; */
 }
 .contents .valorant .comment .item {
     grid-column: span 12;
     position: relative;
 }
 .contents .valorant .comment .txt1 {
-    height: 42px;
-    margin-top: 150px;
+    height: 45px;
+    /* margin-top: 150px; */
     /* background-color: pink; */
 }
 .contents .valorant .comment .txt1 .mo_txt {
@@ -147,20 +171,27 @@ body.fixed {
 .contents .valorant .comment .txt1 .dt_txt {
     display: none;
 }
+.contents .valorant .comment .txt2 {
+    margin-bottom: 60px;
+}
 /************************ 뉴스부분 ***********************/
-.contents .valorant .news {
+.contents .news {
     width: 100%;
-    /* background-color: blue; */
+    background-color: rgb(236, 232, 225);
+}
+.contents .news .wrap {
+    width: 100%;
+    background-color: blue;
     height: 100%;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     overflow: hidden;
 }
-.contents .valorant .news .title {
+.contents .news .wrap .title {
     width: 100%;
     line-height: 70px;
     /* background-color: yellowgreen; */
 }
-.contents .valorant .news .news_contents {
+.contents .news .wrap .news_contents {
     width: 100%;
     margin-top: 30px;
     display: flex;
@@ -168,17 +199,17 @@ body.fixed {
     /* transform: translateX(-200px); */
     transition: transform .6s ease-in-out;
 }
-.contents .valorant .news .news_contents .item {
+.contents .news .wrap .news_contents .item {
     flex: 0 0 100%;
 }
-.contents .valorant .news .news_img {
+.contents .news .wrap .news_img {
     width: 100%;
     aspect-ratio: 16/9;
     background-color: yellow;
     overflow: hidden;
     position: relative;
 }
-.contents .valorant .news .news_img img {
+.contents .news .wrap .news_img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -187,42 +218,42 @@ body.fixed {
     opacity: 0;
     transition: all cubic-bezier(0.7, 0, 0.15, 1) 1s;
 }
-.contents .valorant .news .news_img.active img {
+.contents .news .wrap .news_img.active img {
     top: 0;
     opacity: 1;
 }
-.contents .valorant .news .news_date {
+.contents .news .wrap .news_date {
     width: 100%;
     height: 60px;
     background-color: darkcyan;
 }
-.contents .valorant .news .news_title {
+.contents .news .wrap .news_title {
     width: 100%;
     height: 60px;
     background-color: darkgoldenrod;
 }
-.contents .valorant .news .news_decs {
+.contents .news .wrap .news_decs {
     width: 100%;
     background-color: saddlebrown;
 }
-.contents .valorant .news .pagenation {
+.contents .news .wrap .pagenation {
     width: 100%;
     background-color: thistle;
     height: 40px;
     display: flex;
 }
-.contents .valorant .news .pagenation .progress {
+.contents .news .wrap .pagenation .progress {
     width: calc(100% - 80px);
     background-color: steelblue;
     height: 100%;
 }
-.contents .valorant .news .pagenation .control {
+.contents .news .wrap .pagenation .control {
     width: 80px;
     height: 100%;
     background-color: mediumvioletred;
     display: flex;
 }
-.contents .valorant .news .pagenation .control > div {
+.contents .news .wrap .pagenation .control > div {
     width: 40px;
     background-color: yellowgreen;
     height: 100%;
@@ -231,16 +262,16 @@ body.fixed {
     .contents .intro .video .wrapper {
         width: 50%;
     }
-    .contents .valorant .news .news_contents {
+    .contents .news .wrap .news_contents {
         gap: 20px
     }
-    .contents .valorant .news .news_contents .item {
+    .contents .news .wrap .news_contents .item {
         flex: 0 0 calc(50% - 10px);
     }
-    /* .contents .valorant .news .news_contents > div:nth-child(even) {
+    /* .contents .news .wrap .news_contents > div:nth-child(even) {
         margin-left: auto;
     } */
-    .contents .valorant .news .news_img {
+    .contents .news .wrap .news_img {
         width: 100%;
         aspect-ratio: 16/9;
         background-color: yellow;
@@ -282,7 +313,7 @@ body.fixed {
     }
     .contents .valorant .comment {
         grid-template-rows: repeat(2, minmax(0, 1fr));
-        margin-top: 150px;
+        margin-bottom: 60px;
     }
     .contents .valorant .comment .txt1 {
         order: 3;
@@ -295,6 +326,7 @@ body.fixed {
         order: 2;
         grid-column: span 4;
         grid-row: span 1;
+
     }
     .contents .valorant .comment .vdo {
         order: 1;
@@ -339,10 +371,14 @@ body.fixed {
         bottom: 0;
         transition-delay: .3s;
     }
-    .contents .valorant .news .news_contents .item {
+    .contents .valorant .comment .txt2 {
+        margin-bottom: 0;
+    }
+
+    .contents .news .wrap .news_contents .item {
         flex: 0 0 calc(33% - 10px);
     }
-    .contents .valorant .news .pagenation {
+    .contents .news .wrap .pagenation {
         display: none;
     }
 }

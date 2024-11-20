@@ -42,6 +42,22 @@ setTimeout(()=>{
     bodyFixed.classList.remove("fixed");
 }, 3500);
 
+// 첫번째 section - valorant txt 부분 (우리는 발로란트다)
+window.addEventListener("scroll",function(){
+    let scrollTop = window.scrollY;
+    let windowHeight = window.innerHeight;
+    let weValorant = document.querySelector(".contents .valorant .txt p");
+    let weValorantHeight = weValorant.offsetHeight;
+    let distanceFromHtml = weValorant.getBoundingClientRect().top + this.window.scrollY;
+
+    if (distanceFromHtml + weValorantHeight < scrollTop + windowHeight) {
+        weValorant.classList.add("active");
+    }
+    else if (distanceFromHtml + weValorantHeight > scrollTop + windowHeight) {
+        weValorant.classList.remove("active");
+    }
+})
+
 
 // 스크롤 하면 애니메이션 시작 => introduction txt2 mobile
 window.addEventListener("scroll", function(){
@@ -91,7 +107,7 @@ window.addEventListener("scroll", function(){
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
     
-    let newsImg = document.querySelector(".contents .valorant .news .news_img");
+    let newsImg = document.querySelector(".contents .news .news_img");
     let newImgHeight = newsImg.offsetHeight;
     let imgFromHtml = newsImg.getBoundingClientRect().top + this.window.scrollY;
     if (imgFromHtml + newImgHeight < scrollTop + windowHeight) {
@@ -101,19 +117,19 @@ window.addEventListener("scroll", function(){
         newsImg.classList.remove("active")
     }
 
-    let newsDate = document.querySelector(".contents .valorant .news .news_date");
+    let newsDate = document.querySelector(".contents .news .news_date");
     let newsDateHeight = newsDate.offsetHeight;
     let dateFromHtml = newsDate.getBoundingClientRect().top + this.window.scrollY;
 
-    let newsTitle = document.querySelector(".contents .valorant .news .news_title");
+    let newsTitle = document.querySelector(".contents .news .news_title");
     let newsTitleHeight = newsTitle.offsetHeight;
     let tileFromHtml = newsTitle.getBoundingClientRect().top + this.window.scrollY;
 
-    let newsDecs = document.querySelector(".contents .valorant .news .news_decs");
+    let newsDecs = document.querySelector(".contents .news .news_decs");
     let newsDecsHeight = newsDecs.offsetHeight;
     let decsFromHtml = newsDecs.getBoundingClientRect().top + this.window.scrollY;
 
-    let newsPagenation = document.querySelector(".contents .valorant .news .pagenation");
+    let newsPagenation = document.querySelector(".contents .news .pagenation");
     let newsPagenationHeight = newsPagenation.offsetHeight;
     let pagenationFromHtml = newsPagenation.getBoundingClientRect().top + this.window.scrollY;
 
@@ -121,32 +137,32 @@ window.addEventListener("scroll", function(){
 
 
 //뉴스 슬라이드 캐러셀
-let newsContents = document.querySelector(".contents .valorant .news .news_contents");
-let news = document.querySelectorAll(".contents .valorant .news .news_contents .item");
-let next = document.querySelector(".contents .valorant .news .pagenation .control .next");
-let prev = document.querySelector(".contents .valorant .news .pagenation .control .prev");
-let now = 0;
-let last = news.length;
+// let newsContents = document.querySelector(".contents .news .news_contents");
+// let news = document.querySelectorAll(".contents .news .news_contents .item");
+// let next = document.querySelector(".contents .news .pagenation .control .next");
+// let prev = document.querySelector(".contents .news .pagenation .control .prev");
+// let now = 0;
+// let last = news.length;
 
-next.addEventListener("click", function(){
-    // for문 하면 안되고 이프문으로 하고 클릭하면 +1 하는 식으로 해야할 듯 함 어차피 통채로 움직이니까
+// next.addEventListener("click", function(){
+//     // for문 하면 안되고 이프문으로 하고 클릭하면 +1 하는 식으로 해야할 듯 함 어차피 통채로 움직이니까
 
-    if (now == 0 || now < last - 1) {
-        newsContents.style.transform = `translateX(-${now+1}00%)`;
-        now += 1;
-        console.log(now)
-    }
-});
+//     if (now == 0 || now < last - 1) {
+//         newsContents.style.transform = `translateX(-${now+1}00%)`;
+//         now += 1;
+//         console.log(now)
+//     }
+// });
 
-prev.addEventListener("click", function(e){
+// prev.addEventListener("click", function(e){
 
-    if (now > 1) {
-        newsContents.style.transform = `translateX(-${now-1}00%)`;
-        console.log(now)
-        now -= 1;
-    } else if (now == 1) {
-        newsContents.style.transform = `translateX(0%)`;
-        e.preventDefault();
-        now = 0;
-    }
-});
+//     if (now > 1) {
+//         newsContents.style.transform = `translateX(-${now-1}00%)`;
+//         console.log(now)
+//         now -= 1;
+//     } else if (now == 1) {
+//         newsContents.style.transform = `translateX(0%)`;
+//         e.preventDefault();
+//         now = 0;
+//     }
+// });
